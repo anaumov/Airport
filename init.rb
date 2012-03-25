@@ -5,3 +5,7 @@ puts airplane1.name
 airplane1.altitude=(100)
 
 puts airplane1.altitude
+
+
+run = Runaway.new(35, "beton", 120, 150, 200)
+puts run.surface_type

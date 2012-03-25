@@ -11,3 +11,16 @@ class Airplane
   end
 
 end
+
+class Runaway
+		attr_reader :cource, :surface_type, :position_x, :position_y, :altitude
+	
+	def initialize(cource, surface_type, position_x, position_y, altitude)
+		@cource       = cource
+		@surface_type = surface_type
+		@position_x   = position_x
+		@position_y   = position_y
+		@altitude     = altitude
+	end
+
+end
