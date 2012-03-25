@@ -8,4 +8,9 @@ puts airplane1.altitude
 
 
 run = Runaway.new(35, "beton", 120, 150, 200)
-puts run.surface_type
+run2 = Runaway.new(33, "beton", 1200, 1500, 1200)
+
+puts run
+
+domodedovo = Airport.new("domodedovo", "DME", [run, run2])
+puts domodedovo.runaway

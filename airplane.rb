@@ -24,3 +24,14 @@ class Runaway
 	end
 
 end
+
+class Airport
+	attr_reader :name, :code, :runaway
+	
+	def initialize(name, code, runaway)
+		@name    = name
+		@code    = code
+		@runaway = runaway
+	end
+
+end
