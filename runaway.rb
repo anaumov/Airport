@@ -1,4 +1,4 @@
-class Runaway
+class Runway
 	attr_reader :cource, :surface_type, :position_x, :position_y, :altitude, :airplane, :airport
 	
 	def initialize(cource, surface_type, position_x, position_y, altitude, airport)
@@ -13,17 +13,19 @@ class Runaway
 
 	def receive_airplane(airplane)
 		if (@airplane) 
-			puts "runaway already busy" 
+			puts "runway already busy" 
 		else 
 			@airplane = airplane
+      airplane.airport = self.airport
 		end
 	end
 
 	def depart_airplane(airplane)
 		if (@airplane) 
 			@airplane = nil
+      airplane.airport = nil
 		else 
-			puts "runaway empty"
+			puts "runway empty"
 		end
 	end
 

@@ -4,33 +4,20 @@ require_relative "runaway"
 
 airplane1 = Airplane.new
 airplane2 = Airplane.new
-puts airplane1.weight
-puts airplane1.name
 airplane1.altitude=(100)
 
-puts airplane1.altitude
 
 domodedovo = Airport.new("domodedovo", "DME")
 
-run = Runaway.new(35, "beton", 120, 150, 200, domodedovo)
-run2 = Runaway.new(33, "beton", 1200, 1500, 1200, domodedovo)
-
-puts run.airport.name
-
-
+run = Runway.new(35, "beton", 120, 150, 200, domodedovo)
+run2 = Runway.new(33, "beton", 1200, 1500, 1200, domodedovo)
 
 run.receive_airplane(airplane1)
 puts run.airplane
-
-run.receive_airplane(airplane2)
-
-run.depart_airplane(airplane1)
-puts run.airplane
+puts "Flight " + airplane1.name + " landed at " + airplane1.airport.code
 
 run.depart_airplane(airplane1)
-puts run.airplane
+puts airplane1.airport
 
 
-run.receive_airplane(airplane2)
-puts run.airplane
  
