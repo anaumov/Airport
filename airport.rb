@@ -1,12 +1,12 @@
 class Airport
-	attr_reader :name, :code
+  attr_reader :name, :code
   attr_accessor :runways
 	
-	def initialize(name, code)
-		@name    = name
-		@code    = code
+  def initialize(name, code)
+    @name    = name
+    @code    = code
     @runways = Array.new
-	end
+  end
   
   def addrunway(runway)
     @runways.push(runway)
