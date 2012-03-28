@@ -14,9 +14,12 @@ class Runway
 	def receive_airplane(airplane)
 		if (@airplane) 
 			puts "runway already busy" 
-		else 
+		elsif (airplane.airport == self.airport)
+      puts airplane.name + " already landed at " + airplane.airport.code
+    else 
 			@airplane = airplane
       airplane.airport = self.airport
+      puts airplane.name + " landed at " + airplane.airport.code
 		end
 	end
 
@@ -24,6 +27,7 @@ class Runway
 		if (@airplane) 
 			@airplane = nil
       airplane.airport = nil
+      puts airplane.name + " taked off from " + airplane.airport.code
 		else 
 			puts "runway empty"
 		end
