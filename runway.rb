@@ -1,14 +1,14 @@
 class Runway
   attr_reader :cource, :surface_type, :position_x, :position_y, :altitude, :airplane, :airport
 	
-  def initialize(cource, surface_type, position_x, position_y, altitude, airport)
-    @cource       = cource
-    @surface_type = surface_type
-    @position_x   = position_x
-    @position_y   = position_y
-    @altitude     = altitude
+  def initialize(params)
+    @cource       = params[:cource]
+    @surface_type = params[:surface_type]
+    @position_x   = params[:position_x]
+    @position_y   = params[:position_y]
+    @altitude     = params[:altitude]
     @airplane     = nil
-    @airport      = airport
+    @airport      = params[:airport]
   end
 
   def receive_airplane(airplane)

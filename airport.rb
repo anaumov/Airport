@@ -2,9 +2,9 @@ class Airport
   attr_reader :name, :code
   attr_accessor :runways
 	
-  def initialize(name, code)
-    @name    = name
-    @code    = code
+  def initialize(params)
+    @name    = params[:name]
+    @code    = params[:code]
     @runways = Array.new
   end
   
@@ -12,7 +12,7 @@ class Airport
     @runways.push(runway)
   end
 
-  def free_runways(plane)
+  def free_runways
     self.runways.each{|a| yield a if a.airplane == nil }
   end
 end
