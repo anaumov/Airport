@@ -9,6 +9,7 @@ class Runway
     @altitude     = params[:altitude]
     @airplane     = nil
     @airport      = params[:airport]
+    params[:airport].add_runway(self)
   end
 
   def receive_airplane(airplane)
@@ -19,6 +20,7 @@ class Runway
     else 
       @airplane = airplane
       airplane.airport = self.airport
+      airplane.airport.landing(airplane)
       puts airplane.name + " landed at " + airplane.airport.code
     end
   end
@@ -26,8 +28,9 @@ class Runway
   def depart_airplane(airplane)
     if (@airplane) 
       @airplane = nil
-      airplane.airport = nil
+      airplane.airport.takeoff(airplane)
       puts airplane.name + " taked off from " + airplane.airport.code
+      airplane.airport = nil
     else 
       puts "runway empty"
     end

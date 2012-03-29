@@ -12,9 +12,12 @@ domodedovo = Airport.new(:name => "domodedovo",  :code => "DME")
 run = Runway.new(:cource => 35, :surface_type => "beton", :position_x => 120, :position_y => 150, :altitude => 200, :airport => domodedovo)
 run2 = Runway.new(:cource => 25, :surface_type => "beton", :position_x => 100, :position_y => 170, :altitude => 150, :airport => domodedovo)
 
-domodedovo.addrunway(run)
-domodedovo.addrunway(run2)
 
 domodedovo.free_runways { |r| puts "Runway #{r} is free" }
 domodedovo.free_runways { |r| r.receive_airplane(plane1) }
 
+puts domodedovo.planes
+
+run.depart_airplane(plane1)
+
+puts domodedovo.planes
