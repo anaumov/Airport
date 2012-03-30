@@ -13,7 +13,7 @@ class Airport
     @runways.push(runway)
   end
   
-  def landing(plane)
+  def land(plane)
     @planes.push(plane)
   end
 

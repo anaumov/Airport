@@ -6,7 +6,6 @@ plane1 = Airplane.new(:name => "Boeing 777", :weight => 134800 ,:height => 19 )
 plane2 = Airplane.new(:name => "Airbus A380", :weight => 571000 ,:height => 24)
 plane1.altitude=(100)
 
-
 domodedovo = Airport.new(:name => "domodedovo",  :code => "DME")
 
 run = Runway.new(:cource => 35, :surface_type => "beton", :position_x => 120, :position_y => 150, :altitude => 200, :airport => domodedovo)

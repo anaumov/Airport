@@ -20,7 +20,7 @@ class Runway
     else 
       @airplane = airplane
       airplane.airport = self.airport
-      airplane.airport.landing(airplane)
+      airplane.airport.land(airplane)
       puts airplane.name + " landed at " + airplane.airport.code
     end
   end
