@@ -1,4 +1,8 @@
+require_relative "airplanecontainer"
+
 class Airport
+  include AirplaneContainer
+
   attr_reader :name, :code, :planes
   attr_accessor :runways
 	
@@ -13,14 +17,6 @@ class Airport
     @runways.push(runway)
   end
   
-  def land(plane)
-    @planes.push(plane)
-  end
-
-  def takeoff(plane)
-    @planes.delete(plane)
-  end
-
   def free_runways
     self.runways.each{|a| yield a if a.airplane == nil }
   end
