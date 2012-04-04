@@ -1,5 +1,3 @@
-require_relative "airplanecontainer"
-
 class Airport
   include AirplaneContainer
 
@@ -18,6 +16,6 @@ class Airport
   end
   
   def free_runways
-    self.runways.each{|a| yield a if a.airplane == nil }
+    self.runways.each {|a| yield a if a.airplane == nil }
   end
 end

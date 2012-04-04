@@ -1,4 +1,3 @@
-require_relative "airplanecontainer"
 class Radar
   include AirplaneContainer
 
