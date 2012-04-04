@@ -14,6 +14,7 @@ radar = Radar.new(:name => "first")
 radar.land(plane1)
 radar.land(plane2)
 
+
 run = Runway.new(:cource => 35, :surface_type => "beton", :position_x => 120, :position_y => 150, :altitude => 200, :airport => domodedovo)
 run2 = Runway.new(:cource => 25, :surface_type => "beton", :position_x => 100, :position_y => 170, :altitude => 150, :airport => domodedovo)
 
@@ -22,7 +23,20 @@ domodedovo.free_runways { |r| puts "Runway #{r} is free" }
 domodedovo.free_runways { |r| r.receive_airplane(plane1) }
 domodedovo.free_runways { |r| r.receive_airplane(plane2) }
 
-puts domodedovo.planes
+domodedovo.land(plane2)
+domodedovo.land(plane2)
+domodedovo.land(plane2)
+domodedovo.land(plane2)
+domodedovo.land(plane2)
+domodedovo.land(plane2)
+domodedovo.land(plane2)
+domodedovo.land(plane2)
+domodedovo.land(plane2)
+domodedovo.land(plane2)
+domodedovo.land(plane2)
+domodedovo.land(plane2)
+domodedovo.land(plane2)
+
 
 
 run.depart_airplane(plane1)

@@ -1,8 +1,14 @@
 module AirplaneContainer
 
+    attr_accessor :max_palnes_num
 
     def land(plane)
-      @planes.push(plane)
+      if (@planes.length + 1) > self.max_palnes_num 
+        puts "too much planes"      
+      else
+        @planes.push(plane)
+      end
+    
     end
 
     def takeoff(plane)

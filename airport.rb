@@ -5,10 +5,11 @@ class Airport
   attr_accessor :runways
 	
   def initialize(params)
-    @name    = params[:name]
-    @code    = params[:code]
-    @runways = Array.new
-    @planes  = Array.new
+    @name           = params[:name]
+    @code           = params[:code]
+    @runways        = Array.new
+    @planes         = Array.new
+    @max_palnes_num = params[:max_palnes_num]||= 10
   end
   
   def add_runway(runway)
