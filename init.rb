@@ -1,4 +1,4 @@
-require_relative "airplanecontainer"
+require_relative "airplane_container"
 require_relative "airplane"
 require_relative "airport"
 require_relative "runway"
@@ -23,19 +23,17 @@ domodedovo.free_runways { |r| puts "Runway #{r} is free" }
 domodedovo.free_runways { |r| r.receive_airplane(plane1) }
 domodedovo.free_runways { |r| r.receive_airplane(plane2) }
 
-domodedovo.land(plane2)
-domodedovo.land(plane2)
-domodedovo.land(plane2)
-domodedovo.land(plane2)
-domodedovo.land(plane2)
-domodedovo.land(plane2)
-domodedovo.land(plane2)
-domodedovo.land(plane2)
-domodedovo.land(plane2)
-domodedovo.land(plane2)
-domodedovo.land(plane2)
-domodedovo.land(plane2)
-domodedovo.land(plane2)
+for i in 0..12
+   begin  
+     domodedovo.land(plane2)
+   rescue  
+     puts 'Too many planes in airport'  
+   end 
+end
+
+
+ 
+
 
 
 

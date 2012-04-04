@@ -4,7 +4,7 @@ module AirplaneContainer
 
     def land(plane)
       if (@planes.length + 1) > self.max_palnes_num 
-        puts "too much planes"      
+        raise "too much planes"      
       else
         @planes.push(plane)
       end
