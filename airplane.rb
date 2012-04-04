@@ -16,6 +16,15 @@ class Airplane
     fuel > 100 ? true : false
   end
 
+  def descend
+    while self.altitude > 0  do
+      sleep(1);
+      self.altitude-=5
+    end
+  end 
+ 
+
+
   private
 
     def fuel

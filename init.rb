@@ -6,7 +6,9 @@ require_relative "radar"
 
 plane1 = Airplane.new(name: "Boeing 777", :weight => 134800, :height => 19)
 plane2 = Airplane.new(:name => "Airbus A380", :weight => 571000, :height => 24)
-plane1.altitude=(100)
+plane1.altitude=(25)
+
+plane1.descend
 
 domodedovo = Airport.new(:name => "domodedovo", :code => "DME")
 radar = Radar.new(:name => "first")
