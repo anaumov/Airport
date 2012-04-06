@@ -1,0 +1,2 @@
+class BigAirplane < Airplane
+end

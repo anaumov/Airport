@@ -24,6 +24,10 @@ module AirplaneContainer
       @plane_count 
     end
 
+    def big_airplanes_count
+      airplanes_count { |bigplane| (yield(bigplane) && bigplane.class.name == "BigAirplane") }
+    end
+
     def each_airplane_name
       self.planes.each {|plane| yield(plane.name)}
     end
