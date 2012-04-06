@@ -33,12 +33,6 @@ for i in 0..12
    end 
 end
 
-
- 
-
-
-
-
 run.depart_airplane(plane1)
 
 puts domodedovo.airplanes_count { |a| a.name == "Boeing 777" }

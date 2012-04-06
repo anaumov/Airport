@@ -1,7 +1,8 @@
 module AirplaneContainer
-
+  
+  module Manager
     attr_accessor :max_palnes_num
-
+    
     def land(plane)
       if (@planes.length + 1) > self.max_palnes_num 
         raise "too much planes"      
@@ -14,7 +15,9 @@ module AirplaneContainer
     def takeoff(plane)
       @planes.delete(plane)
     end
-
+  end
+  
+  module Info
     def airplanes_count
       @plane_count = 0
       self.planes.each {|plane| yield(plane) ? @plane_count+=1 : @plane_count }
@@ -25,5 +28,6 @@ module AirplaneContainer
       self.planes.each {|plane| yield(plane.name)}
     end
 
+  end
 end
 

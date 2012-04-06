@@ -1,5 +1,6 @@
 class Radar
-  include AirplaneContainer
+  include AirplaneContainer::Manager
+  include AirplaneContainer::Info
 
   attr_reader :name
   attr_accessor :planes

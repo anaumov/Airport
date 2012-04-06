@@ -1,5 +1,6 @@
 class Airport
-  include AirplaneContainer
+  include AirplaneContainer::Manager
+  include AirplaneContainer::Info
 
   attr_reader :name, :code, :planes
   attr_accessor :runways
