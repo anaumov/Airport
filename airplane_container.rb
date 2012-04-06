@@ -5,9 +5,10 @@ module AirplaneContainer
     
     def land(plane)
       if (@planes.length + 1) > self.max_palnes_num 
-        raise "too much planes"      
+        raise "too many planes"      
       else
         @planes.push(plane)
+        self.class.name == "Radar" ? super : true
       end
     
     end

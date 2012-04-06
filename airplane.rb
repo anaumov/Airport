@@ -18,7 +18,7 @@ class Airplane
 
   def descend
     while self.altitude > 0  do
-      sleep(1);
+      sleep(2);
       self.altitude-=5
     end
   end 

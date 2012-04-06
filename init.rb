@@ -9,8 +9,9 @@ plane1 = Airplane.new(name: "Boeing 777", :weight => 134800, :height => 19)
 plane2 = BigAirplane.new(:name => "Airbus A380", :weight => 571000, :height => 24)
 plane3 = BigAirplane.new(:name => "Boeing 747", :weight => 301000, :height => 22)
 plane1.altitude=(25)
+plane2.altitude=(30)
 
-#plane1.descend
+
 
 domodedovo = Airport.new(:name => "domodedovo", :code => "DME")
 radar = Radar.new(:name => "first")
@@ -18,6 +19,9 @@ radar = Radar.new(:name => "first")
 radar.land(plane1)
 radar.land(plane2)
 
+plane1.descend
+
+plane2.descend
 
 run = Runway.new(:cource => 35, :surface_type => "beton", :position_x => 120, :position_y => 150, :altitude => 200, :airport => domodedovo)
 run2 = Runway.new(:cource => 25, :surface_type => "beton", :position_x => 100, :position_y => 170, :altitude => 150, :airport => domodedovo)
